@@ -1,0 +1,282 @@
+/* CSS COTIZADOR */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+/* fondo del cotizador */
+  .bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, DarkSlateGray 50%, NavajoWhite 40%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+
+select {
+    font-size: inherit;
+    margin: 8px 0px 7px;
+    background-color: aliceblue;
+    padding: 8px 5px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 7px;
+    border: solid 1px #ada2a2;
+    color: #736d6d;
+}
+
+.select {
+    text-align: center;
+}
+
+.main-section {
+    color: #736c6c;
+    margin: 3% auto 0;
+    width: 95%;
+    height: 38vw;
+    box-shadow: #000 0px 4px 29px 0px;
+    background-image: url(criptomonedas-como-bitcoin-o-ethereum.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.main-section .containers {
+    width: 500px;
+    height: 220px;
+    box-shadow: #000 0px 4px 29px 0px;
+    background: #fff;
+}
+
+.containers div {
+    font-size: 12px;
+}
+
+.main-section .control {
+    position: static;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: Peru;
+    border: 2px solid #fff;
+    cursor: pointer;
+    object-fit: contain;
+    padding: 10px;
+    box-shadow: #000 0px 4px 29px 0px;
+    transition: .5s;
+}
+.main-section .prev {
+    transform: translate(-50%, -50%);
+    transform: rotate(-90deg);
+}
+
+.main-section .next {
+    transform: translate(50%, -50%);
+    transform: rotate(-92deg);
+}
+
+.main-section .control:hover {
+    background: moccasin;
+    width: 70px;
+    height: 70px;
+}
+
+.lider {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.lider:first-child .containers {
+    width: 70%;
+}
+
+.containers div,.containers h2 {
+    top: 0;
+    margin:  0;
+}
+
+.containers img {
+    background: grey;
+    width: 80px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+/*Cerrar sesión boton*/
+
+button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 10px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border-color: red;
+    border: 1px solid red;
+ }
+
+ button:hover {
+     background-color: white;
+    color: black;
+    border-color: red;
+ }
+
+/*responsive design*/
+
+@media (max-width: 473px) {
+    .containers:not(.lider:first-child .containers) {
+        height: 300px !important;
+        margin-bottom: 16px !important;
+    }
+    .main-section {
+        max-height: 100% !important;
+        max-width: 90% !important;
+        overflow: scroll;
+        display: block !important;
+    }
+    .lider:first-child {
+        height: 300px !important;
+    }
+    .lider:first-child .containers {
+        height: 220px !important;
+    }
+    .lider:not(.lider:first-child){
+        height: 100% !important;
+    }
+}
+
+@media (max-width: 535px) {
+    .containers:not(.lider:first-child .containers) {
+        height: 220px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .main-section {
+        min-height: 810vw !important;
+    }
+    .lider:not(.lider:first-child) {
+        margin-bottom: 10px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .containers:not(.lider:first-child .containers){
+        min-width: 85% !important;
+        margin-bottom: 40px;
+    }
+    .main-section {
+        max-height: 800vw !important;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: space-around;
+    }
+    .lider:not(.lider:first-child) {
+        margin-bottom: 150px;
+    }
+}
+
+@media (max-width: 651px) {
+    .containers:not(.lider:first-child .containers) {
+        min-width: 93%;
+        height: 190px;
+    }
+
+    .main-section .control,.main-section .control:hover {
+        display: none;
+    }
+
+    .main-section {
+        color: #000;
+        width: 99%;
+        min-height: 420vw !important;
+        box-shadow: #000 0px 4px 29px 0px;
+        border-radius: 2px;
+        background-image: none;
+        margin-bottom: 10px;
+    }
+
+    .lider {
+        height: 33%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lider:first-child .containers {
+        width: 90%;
+        height: 50%;
+    }
+}
+
+@media (max-width: 870px) {
+    .containers:not(.lider:first-child .containers) {
+        width: 270px !important;
+        height: 165px !important;
+    }
+    .main-section{
+        height: 58vw !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .containers:not(.lider:first-child .containers) {
+        width: 300px;
+        height: 190px;
+    }
+    .main-section .control,.main-section .control:hover {
+        width: 30px;
+        height: 30px;
+    }
+    .containers div {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .containers:not(.lider:first-child .containers) {
+        max-width: 400px;
+    }
+    .main-section .control:hover {
+    width: 40px;
+    height: 40px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .main-section {
+        height: 45vw;
+    }
+
+    .main-section .control {
+    width: 40px;
+    height: 40px;
+}
+}
