@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizador</title>
+    <script src="custom.js" defer></script>
+    <link rel="stylesheet" href="convertidor.css">
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+    <!-- cerrar sesion -->
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="select">
+        <!-- Menu -->
+        <nav class="nav">
+        <ul>
+            <a href="#1"><li>Inicio</li></a>
+            <a href="https://tecnologiassoftwaredelfuturo.blogspot.com" target="_blank"><li>Blog</li></a>
+            <a href="https://github.com/NooritaTab/cotizador/commit/ed1195c52a5b2f39abd9853b69ea1dafb2d22e8c#diff-679eb123abeea214199c0d61d6765b5fb62e04c4bb9e88f60c7f7552e56731f3" target="_blank"><li>Github</li></a>
+            <a href="https://youtu.be/YkHqswYJ4Uw" target="_blank"><li>youtube</li></a>
+            <a type="button" id="myBtn"><li>Cerrar sesion</li></a>
+        </ul>
+        </nav>
+        <!-- cotizador -->
+        <select id="moneda">
+            <option value="">Selecciona una moneda...</option>
+            <option value="USD">Dolar Estadounidense</option>
+            <option value="MXN">Peso Mexicano</option>
+            <option value="GBP">Libras</option>
+            <option value="EUR">Euros</option>
+            <option value="BS">Bolivares</option>
+        </select>
+    </div>
+    <section class="main-section">
+        <div class="lider" id="1">
+            <div class="containers">
+                <h1>Bienvenido al Cotizador, <span id="usuario"></span></h1>
+            </div>
+            <a href="#2"><img class="control prev" src="img1.png" alt=""></a>
+        </div>
+        <div class="lider" id="2">
+            <div class="containers">
+                <h2>BTC</h2>
+                <div class="container_answer"></div>
+                <div id="display1">
+                    <p class="main-price">Precio: <span>------</span></p>
+                    <p>Precio más alto del día:: <span>------</span></p>
+                    <p>Precio más bajo del día: <span>------</span></p>
+                    <p>Variación últimas 24 horas: <span>------</span></p>
+                    <p>Última Actualización: <span>------</span></p>
+                </div>
+                <img src="https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/1.svg" class="g1">
+            </div>
+            <div class="containers">
+                <h2>ETH</h2>
+                <div id="display2">
+                    <p class="main-price">Precio: <span>------</span></p>
+                    <p>Precio más alto del día:: <span>------</span></p>
+                    <p>Precio más bajo del día: <span>------</span></p>
+                    <p>Variación últimas 24 horas: <span>------</span></p>
+                    <p>Última Actualización: <span>------</span></p>
+                </div>
+                <img src="https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/1027.svg" class="g2">
+            </div>
+            <a href="#1"><img class="control next" src="img2.png" alt=""></a>
+            <div class="containers">
+                <h2>USDT</h2>
+                <div id="display3">
+                    <p class="main-price">Precio: <span>------</span></p>
+                    <p>Precio más alto del día:: <span>------</span></p>
+                    <p>Precio más bajo del día: <span>------</span></p>
+                    <p>Variación últimas 24 horas: <span>------</span></p>
+                    <p>Última Actualización: <span>------</span></p>
+                </div>
+                <img src="https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/825.svg" class="g3">
+            </div>
+            <div class="containers">
+                <h2>BNB</h2>
+                <div id="display4">
+                    <p class="main-price">Precio: <span>------</span></p>
+                    <p>Precio más alto del día:: <span>------</span></p>
+                    <p>Precio más bajo del día: <span>------</span></p>
+                    <p>Variación últimas 24 horas: <span>------</span></p>
+                    <p>Última Actualización: <span>------</span></p>
+                </div>
+                <img src="https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/1839.svg" class="g4">
+            </div>
+            <a href="#3"><img class="control prev" src="img1.png" alt=""></a>
+        </div>
+        <div class="lider" id="3">
+            <div class="containers">
+                <h2>USDC</h2>
+                <div class="container_answer"></div>
+                <div id="display5">
+                    <p class="main-price">Precio: <span>------</span></p>
+                    <p>Precio más alto del día:: <span>------</span></p>
+                    <p>Precio más bajo del día: <span>------</span></p>
+                    <p>Variación últimas 24 horas: <span>------</span></p>
+                    <p>Última Actualización: <span>------</span></p>
+                </div>
+                <img src="https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/3408.svg" class="g5">
+            </div>
+            <div class="containers">
+                <h2>XRP</h2>
+                <div id="display6">
+                    <p class="main-price">Precio: <span>------</span></p>
+                    <p>Precio más alto del día:: <span>------</span></p>
+                    <p>Precio más bajo del día: <span>------</span></p>
+                    <p>Variación últimas 24 horas: <span>------</span></p>
+                    <p>Última Actualización: <span>------</span></p>
+                </div>
+                <img src="https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/52.svg" class="g6">
+            </div>
+            <a href="#2"><img class="control next" src="img2.png" alt=""></a>
+            <div class="containers">
+                <h2>BUSD</h2>
+                <div id="display7">
+                    <p class="main-price">Precio: <span>------</span></p>
+                    <p>Precio más alto del día:: <span>------</span></p>
+                    <p>Precio más bajo del día: <span>------</span></p>
+                    <p>Variación últimas 24 horas: <span>------</span></p>
+                    <p>Última Actualización: <span>------</span></p>
+                </div>
+                <img src="https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/4687.svg" class="g7">
+            </div>
+            <div class="containers">
+                <h2>DOGE</h2>
+                <div id="display8">
+                    <p class="main-price">Precio: <span>------</span></p>
+                    <p>Precio más alto del día:: <span>------</span></p>
+                    <p>Precio más bajo del día: <span>------</span></p>
+                    <p>Variación últimas 24 horas: <span>------</span></p>
+                    <p>Última Actualización: <span>------</span></p>
+                </div>
+                <img src="https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/74.svg" class="g8">
+            </div>
+        </div>
+    </section>
+    <section class="modal1 ">
+        <div class="iframe">
+            <a href="#" class="modal__close1">Cerrar</a>
+            <iframe src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_15837&amp;symbol=BTCUSDT&amp;interval=D&amp;hidesidetoolbar=0&amp;symboledit=1&amp;saveimage=1&amp;toolbarbg=F1F3F6&amp;studies=%5B%5D&amp;hideideas=1&amp;theme=Light&amp;style=1&amp;timezone=Etc%2FUTC&amp;studies_overrides=%7B%7D&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;locale=en&amp;utm_source=coinmarketcap.com&amp;utm_medium=widget&amp;utm_campaign=chart&amp;utm_term=BTCUSDT#%7B%22page-uri%22%3A%22coinmarketcap.com%2Fcurrencies%2Fbitcoin%2F%22%7D" style="width: 90%; height: 50%; margin: 0 !important; padding: 0 !important;" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen=""></iframe>
+        </div>
+    </section>
+    <section class="modal2 ">
+        <div class="iframe">
+            <a href="#" class="modal__close2">Cerrar</a>
+            <iframe id="tradingview_b937f" src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_b937f&amp;symbol=ETHUSDT&amp;interval=D&amp;hidesidetoolbar=0&amp;symboledit=1&amp;saveimage=1&amp;toolbarbg=F1F3F6&amp;studies=%5B%5D&amp;hideideas=1&amp;theme=Light&amp;style=1&amp;timezone=Etc%2FUTC&amp;studies_overrides=%7B%7D&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;locale=en&amp;utm_source=coinmarketcap.com&amp;utm_medium=widget&amp;utm_campaign=chart&amp;utm_term=ETHUSDT#%7B%22page-uri%22%3A%22coinmarketcap.com%2Fcurrencies%2Fethereum%2F%22%7D" style="width: 90%; height: 50%; margin: 0 !important; padding: 0 !important;" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen=""></iframe>
+        </div>
+    </section>
+    <section class="modal3 ">
+        <div class="iframe">
+            <a href="#" class="modal__close3">Cerrar</a>
+            <iframe id="tradingview_8ace7" src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_8ace7&amp;symbol=BTCUSDT&amp;interval=D&amp;hidesidetoolbar=0&amp;symboledit=1&amp;saveimage=1&amp;toolbarbg=F1F3F6&amp;studies=%5B%5D&amp;hideideas=1&amp;theme=Light&amp;style=1&amp;timezone=Etc%2FUTC&amp;studies_overrides=%7B%7D&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;locale=en&amp;utm_source=coinmarketcap.com&amp;utm_medium=widget&amp;utm_campaign=chart&amp;utm_term=BTCUSDT#%7B%22page-uri%22%3A%22coinmarketcap.com%2Fcurrencies%2Ftether%2F%22%7D" style="width: 90%; height: 50%; margin: 0 !important; padding: 0 !important;" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen=""></iframe>
+        </div>
+    </section>
+    <section class="modal4 ">
+        <div class="iframe">
+            <a href="#" class="modal__close4">Cerrar</a>
+            <iframe id="tradingview_55367" src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_55367&amp;symbol=BNBUSDT&amp;interval=D&amp;hidesidetoolbar=0&amp;symboledit=1&amp;saveimage=1&amp;toolbarbg=F1F3F6&amp;studies=%5B%5D&amp;hideideas=1&amp;theme=Light&amp;style=1&amp;timezone=Etc%2FUTC&amp;studies_overrides=%7B%7D&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;locale=en&amp;utm_source=coinmarketcap.com&amp;utm_medium=widget&amp;utm_campaign=chart&amp;utm_term=BNBUSDT#%7B%22page-uri%22%3A%22coinmarketcap.com%2Fcurrencies%2Fbnb%2F%22%7D" style="width: 90%; height: 50%; margin: 0 !important; padding: 0 !important;" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen=""></iframe>
+        </div>
+    </section>
+    <section class="modal5 ">
+        <div class="iframe">
+            <a href="#" class="modal__close5">Cerrar</a>
+            <iframe id="tradingview_2f183" src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_2f183&amp;symbol=USDCUSDT&amp;interval=D&amp;hidesidetoolbar=0&amp;symboledit=1&amp;saveimage=1&amp;toolbarbg=F1F3F6&amp;studies=%5B%5D&amp;hideideas=1&amp;theme=Light&amp;style=1&amp;timezone=Etc%2FUTC&amp;studies_overrides=%7B%7D&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;locale=en&amp;utm_source=coinmarketcap.com&amp;utm_medium=widget&amp;utm_campaign=chart&amp;utm_term=USDCUSDT#%7B%22page-uri%22%3A%22coinmarketcap.com%2Fcurrencies%2Fusd-coin%2F%22%7D" style="width: 90%; height: 50%; margin: 0 !important; padding: 0 !important;" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen=""></iframe>
+        </div>
+    </section>
+    <section class="modal6 ">
+        <div class="iframe">
+            <a href="#" class="modal__close6">Cerrar</a>
+            <iframe id="tradingview_a223b" src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_a223b&amp;symbol=XRPUSDT&amp;interval=D&amp;hidesidetoolbar=0&amp;symboledit=1&amp;saveimage=1&amp;toolbarbg=F1F3F6&amp;studies=%5B%5D&amp;hideideas=1&amp;theme=Light&amp;style=1&amp;timezone=Etc%2FUTC&amp;studies_overrides=%7B%7D&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;locale=en&amp;utm_source=coinmarketcap.com&amp;utm_medium=widget&amp;utm_campaign=chart&amp;utm_term=XRPUSDT#%7B%22page-uri%22%3A%22coinmarketcap.com%2Fcurrencies%2Fxrp%2F%22%7D" style="width: 90%; height: 50%; margin: 0 !important; padding: 0 !important;" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen=""></iframe>
+        </div>
+    </section>
+    <section class="modal7 ">
+        <div class="iframe">
+            <a href="#" class="modal__close7">Cerrar</a>
+            <iframe id="tradingview_2f183" src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_2f183&amp;symbol=USDCUSDT&amp;interval=D&amp;hidesidetoolbar=0&amp;symboledit=1&amp;saveimage=1&amp;toolbarbg=F1F3F6&amp;studies=%5B%5D&amp;hideideas=1&amp;theme=Light&amp;style=1&amp;timezone=Etc%2FUTC&amp;studies_overrides=%7B%7D&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;locale=en&amp;utm_source=coinmarketcap.com&amp;utm_medium=widget&amp;utm_campaign=chart&amp;utm_term=USDCUSDT#%7B%22page-uri%22%3A%22coinmarketcap.com%2Fcurrencies%2Fusd-coin%2F%22%7D" style="width: 90%; height: 50%; margin: 0 !important; padding: 0 !important;" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen=""></iframe>
+        </div>
+    </section>
+    <section class="modal8 ">
+        <div class="iframe">
+            <a href="#" class="modal__close8">Cerrar</a>
+            <iframe id="tradingview_64bce" src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_64bce&amp;symbol=DOGEUSDT&amp;interval=D&amp;hidesidetoolbar=0&amp;symboledit=1&amp;saveimage=1&amp;toolbarbg=F1F3F6&amp;studies=%5B%5D&amp;hideideas=1&amp;theme=Light&amp;style=1&amp;timezone=Etc%2FUTC&amp;studies_overrides=%7B%7D&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;locale=en&amp;utm_source=coinmarketcap.com&amp;utm_medium=widget&amp;utm_campaign=chart&amp;utm_term=DOGEUSDT#%7B%22page-uri%22%3A%22coinmarketcap.com%2Fcurrencies%2Fdogecoin%2F%22%7D" style="width: 90%; height: 50%; margin: 0 !important; padding: 0 !important;" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen=""></iframe>
+        </div>
+    </section>
+</body>
+</html>
